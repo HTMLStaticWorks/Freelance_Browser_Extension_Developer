@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Freelance browser extension developer for Chrome and Firefox extensions, analytics, publishing, beta testing, and enterprise client dashboards."
+    />
+    <title>Freelance Browser Extension Developer | ExtensionForge</title>
+    <script src="assets/js/theme-init.js"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+      <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="hero-section hero-bg-home">
+        <div class="container-wide hero-grid">
+          <div class="reveal">
+            <span class="section-kicker">
+              <i data-lucide="globe-2" class="h-4 w-4"></i>
+              Chrome and Firefox extension delivery
+            </span>
+            <h1 class="hero-title soft-glow">
+              Custom Browser Extensions <span class="gradient-text">Built for Growth</span>
+            </h1>
+            <p class="hero-copy mt-6">
+              Premium extension strategy, development, publishing, analytics, beta release support, and secure client dashboards for SaaS teams, startups, productivity apps, e-commerce brands, and automation agencies.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="contact.html" class="btn btn-primary">
+                <i data-lucide="rocket" class="h-4 w-4"></i>
+                Build My Extension
+              </a>
+              <a href="dashboard.html" class="btn btn-ghost">
+                <i data-lucide="monitor-dot" class="h-4 w-4"></i>
+                View Live Demo
+              </a>
+            </div>
+            <div class="mt-8 grid gap-3 sm:grid-cols-3">
+              <div class="metric-card">
+                <p class="text-3xl font-black font-heading" data-counter="42" data-suffix="+">0</p>
+                <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Store launches</p>
+              </div>
+              <div class="metric-card">
+                <p class="text-3xl font-black font-heading" data-counter="148" data-suffix="k+">0</p>
+                <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Tracked installs</p>
+              </div>
+              <div class="metric-card">
+                <p class="text-3xl font-black font-heading" data-counter="98" data-suffix="%">0</p>
+                <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Review pass rate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative reveal">
+            <div class="browser-frame float-card">
+              <div class="browser-topbar">
+                <span class="window-dots"><span></span><span></span><span></span></span>
+                <span class="browser-address">chrome://extensionforge/client-dashboard</span>
+                <i data-lucide="puzzle" class="h-4 w-4 text-primary"></i>
+              </div>
+              <div class="grid gap-4 p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <div>
+                    <p class="text-sm font-black text-slate-500 dark:text-slate-400">Store health</p>
+                    <h2 class="font-heading text-2xl font-extrabold">Launch Control</h2>
+                  </div>
+                  <span class="platform-chip"><i data-lucide="shield-check" class="h-4 w-4"></i> Approved</span>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-3">
+                  <div class="metric-card">
+                    <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Installs</p>
+                    <p class="font-heading text-2xl font-extrabold">24.8k</p>
+                  </div>
+                  <div class="metric-card">
+                    <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Rating</p>
+                    <p class="font-heading text-2xl font-extrabold">4.8</p>
+                  </div>
+                  <div class="metric-card">
+                    <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Crashes</p>
+                    <p class="font-heading text-2xl font-extrabold">0.3%</p>
+                  </div>
+                </div>
+                <canvas class="chart-canvas" data-chart="installs" data-chart-height="190"></canvas>
+              </div>
+            </div>
+
+            <div class="absolute -left-4 top-12 hidden w-52 extension-card p-4 lg:block float-card">
+              <div class="mb-3 flex items-center gap-2">
+                <span class="brand-mark h-8 w-8"><i data-lucide="zap" class="h-4 w-4"></i></span>
+                <p class="text-sm font-black">Beta v2.4 ready</p>
+              </div>
+              <div class="progress-track"><div class="progress-bar" style="width: 86%"></div></div>
+            </div>
+
+            <div class="absolute -right-4 bottom-10 hidden w-56 extension-card p-4 lg:block float-card">
+              <p class="text-xs font-black uppercase text-slate-500 dark:text-slate-400">Review response</p>
+              <p class="mt-2 text-sm font-semibold">Thanks for the report. A permission-scoped patch is scheduled for release.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container-wide">
+          <div class="reveal mb-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <span class="section-kicker"><i data-lucide="badge-check" class="h-4 w-4"></i> Trusted platforms</span>
+              <h2 class="section-title">Extension work built around browser store realities.</h2>
+            </div>
+            <p class="section-copy">
+              The process is shaped around manifest changes, permission prompts, review cycles, store listing copy, beta build checks, and analytics instrumentation that product teams can trust.
+            </p>
+          </div>
+
+          <div class="mb-8 flex flex-wrap gap-3 reveal">
+            <span class="platform-chip"><i data-lucide="globe-2" class="h-4 w-4"></i>Chrome Web Store</span>
+            <span class="platform-chip"><i data-lucide="shield" class="h-4 w-4"></i>Firefox Add-ons</span>
+            <span class="platform-chip"><i data-lucide="database" class="h-4 w-4"></i>GA4 and product analytics</span>
+            <span class="platform-chip"><i data-lucide="lock-keyhole" class="h-4 w-4"></i>Privacy compliance</span>
+            <span class="platform-chip"><i data-lucide="workflow" class="h-4 w-4"></i>CI release workflows</span>
+          </div>
+
+          <div class="visual-grid">
+            <div class="visual-tile reveal">
+              <div class="flex items-center justify-between">
+                <span class="platform-chip"><i data-lucide="store" class="h-4 w-4"></i> Store readiness</span>
+                <span class="text-sm font-black text-primary">98%</span>
+              </div>
+              <div class="mt-5 grid gap-3">
+                <div class="progress-track"><div class="progress-bar" style="width: 94%"></div></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 88%"></div></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 76%"></div></div>
+              </div>
+            </div>
+            <div class="visual-tile reveal">
+              <span class="platform-chip"><i data-lucide="scan-search" class="h-4 w-4"></i> Permission audit</span>
+              <div class="mt-5 grid grid-cols-2 gap-3 text-sm font-bold">
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">storage</span>
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">tabs</span>
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">scripting</span>
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">alarms</span>
+              </div>
+            </div>
+            <div class="visual-tile reveal">
+              <span class="platform-chip"><i data-lucide="message-square-reply" class="h-4 w-4"></i> Review desk</span>
+              <div class="mt-5 space-y-3 text-sm">
+                <p class="font-bold">4.8 average rating</p>
+                <p class="text-slate-500 dark:text-slate-400">Response templates for bug reports, privacy questions, and feature requests.</p>
+                <div class="mini-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white/55 dark:bg-slate-950/30">
+        <div class="container-wide">
+          <div class="mx-auto mb-12 max-w-3xl text-center reveal">
+            <span class="section-kicker justify-center"><i data-lucide="wrench" class="h-4 w-4"></i> Extension development services</span>
+            <h2 class="section-title mx-auto">From browser API architecture to store-ready release management.</h2>
+            <p class="section-copy mx-auto mt-5">
+              Every engagement is designed to move from specification to production with clear artifacts, testable beta builds, and metrics that keep stakeholders aligned.
+            </p>
+          </div>
+
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article class="saas-card reveal">
+              <i data-lucide="layout-dashboard" class="mb-5 h-7 w-7 text-primary"></i>
+              <h3 class="font-heading text-xl font-extrabold">Productivity Extensions</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Context menus, tab workflows, shortcuts, account states, and smooth in-browser task flows.</p>
+            </article>
+            <article class="saas-card reveal">
+              <i data-lucide="bot" class="mb-5 h-7 w-7 text-secondary"></i>
+              <h3 class="font-heading text-xl font-extrabold">Automation Extensions</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Workflow triggers, background services, site actions, and reliable permission boundaries.</p>
+            </article>
+            <article class="saas-card reveal">
+              <i data-lucide="shopping-bag" class="mb-5 h-7 w-7 text-primary"></i>
+              <h3 class="font-heading text-xl font-extrabold">E-commerce Tools</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Price monitoring, product research panels, merchant dashboards, and storefront helpers.</p>
+            </article>
+            <article class="saas-card reveal">
+              <i data-lucide="sparkles" class="mb-5 h-7 w-7 text-secondary"></i>
+              <h3 class="font-heading text-xl font-extrabold">AI-Powered Extensions</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Smart summarization, writing copilots, classifier overlays, and secure API handoffs.</p>
+            </article>
+            <article class="saas-card reveal">
+              <i data-lucide="database-zap" class="mb-5 h-7 w-7 text-primary"></i>
+              <h3 class="font-heading text-xl font-extrabold">Data Capture Tools</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Structured extraction, rate-aware collection, local storage, exports, and audit trails.</p>
+            </article>
+            <article class="saas-card reveal">
+              <i data-lucide="git-branch" class="mb-5 h-7 w-7 text-secondary"></i>
+              <h3 class="font-heading text-xl font-extrabold">Workflow Enhancements</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Extensions that connect SaaS actions, CRM signals, browser tabs, and team operations.</p>
+            </article>
+          </div>
+
+          <div class="mt-10 visual-grid">
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">API integration map</p>
+              <div class="mt-4 grid grid-cols-3 gap-2 text-center text-xs font-black text-slate-500 dark:text-slate-400">
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">OAuth</span>
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">REST</span>
+                <span class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">Events</span>
+              </div>
+            </div>
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">Manifest coverage</p>
+              <canvas class="chart-canvas" data-chart="ratings" data-chart-height="160"></canvas>
+            </div>
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">Beta readiness</p>
+              <div class="mt-4 mini-chart"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container-wide">
+          <div class="mb-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end reveal">
+            <div>
+              <span class="section-kicker"><i data-lucide="workflow" class="h-4 w-4"></i> Development workflow</span>
+              <h2 class="section-title">A transparent delivery system for extension teams.</h2>
+            </div>
+            <p class="section-copy">
+              Clients can review specifications, test beta builds, inspect compatibility notes, monitor store progress, and approve launch steps without losing context in long message threads.
+            </p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-4">
+            <div class="timeline-step reveal">
+              <p class="font-heading text-3xl font-extrabold text-primary">01</p>
+              <h3 class="mt-4 font-heading text-xl font-extrabold">Specification</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Permissions, browser APIs, release scope, privacy constraints, and test paths are mapped first.</p>
+            </div>
+            <div class="timeline-step reveal">
+              <p class="font-heading text-3xl font-extrabold text-secondary">02</p>
+              <h3 class="mt-4 font-heading text-xl font-extrabold">Prototype</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Usable beta builds, browser mockups, and edge case reviews keep the product concrete.</p>
+            </div>
+            <div class="timeline-step reveal">
+              <p class="font-heading text-3xl font-extrabold text-primary">03</p>
+              <h3 class="mt-4 font-heading text-xl font-extrabold">Store Review</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Listing copy, screenshots, data usage notes, and review responses are prepared together.</p>
+            </div>
+            <div class="timeline-step reveal">
+              <p class="font-heading text-3xl font-extrabold text-secondary">04</p>
+              <h3 class="mt-4 font-heading text-xl font-extrabold">Measure</h3>
+              <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Installs, retention, ratings, crash notes, and adoption cohorts feed the next release plan.</p>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <div class="browser-frame reveal">
+              <div class="browser-topbar">
+                <span class="window-dots"><span></span><span></span><span></span></span>
+                <span class="browser-address">specs/permissions-review</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-heading text-xl font-extrabold">Permission Guide</h3>
+                <div class="mt-4 space-y-3 text-sm font-bold">
+                  <div class="flex justify-between"><span>storage</span><span class="text-primary">Required</span></div>
+                  <div class="flex justify-between"><span>scripting</span><span class="text-secondary">Scoped</span></div>
+                  <div class="flex justify-between"><span>tabs</span><span class="text-primary">Reviewed</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="browser-frame reveal">
+              <div class="browser-topbar">
+                <span class="window-dots"><span></span><span></span><span></span></span>
+                <span class="browser-address">beta/version-history</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-heading text-xl font-extrabold">Beta Builds</h3>
+                <div class="mt-4 space-y-3">
+                  <div class="progress-track"><div class="progress-bar" style="width: 92%"></div></div>
+                  <div class="progress-track"><div class="progress-bar" style="width: 74%"></div></div>
+                  <div class="progress-track"><div class="progress-bar" style="width: 63%"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="browser-frame reveal">
+              <div class="browser-topbar">
+                <span class="window-dots"><span></span><span></span><span></span></span>
+                <span class="browser-address">release/analytics</span>
+              </div>
+              <div class="p-5">
+                <h3 class="font-heading text-xl font-extrabold">Release Signals</h3>
+                <div class="mt-4 mini-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white/55 dark:bg-slate-950/30">
+        <div class="container-wide">
+          <div class="mb-12 max-w-3xl reveal">
+            <span class="section-kicker"><i data-lucide="bar-chart-3" class="h-4 w-4"></i> Store performance showcase</span>
+            <h2 class="section-title">Track installs, reviews, rankings, retention, and release impact.</h2>
+            <p class="section-copy mt-5">
+              A client-ready reporting layer connects extension usage analytics with store performance so the team can ship better versions after launch.
+            </p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+            <div class="visual-panel p-5 reveal">
+              <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-sm font-black text-slate-500 dark:text-slate-400">Install velocity</p>
+                  <h3 class="font-heading text-2xl font-extrabold">Chrome and Firefox growth</h3>
+                </div>
+                <span class="platform-chip"><i data-lucide="trending-up" class="h-4 w-4"></i> +31% month over month</span>
+              </div>
+              <canvas class="chart-canvas" data-chart="growth"></canvas>
+            </div>
+
+            <div class="grid gap-5">
+              <div class="visual-panel p-5 reveal">
+                <div class="flex items-center justify-between gap-3">
+                  <div>
+                    <p class="text-sm font-black text-slate-500 dark:text-slate-400">Rating mix</p>
+                    <h3 class="font-heading text-2xl font-extrabold">4.8 average</h3>
+                  </div>
+                  <i data-lucide="star" class="h-7 w-7 text-secondary"></i>
+                </div>
+                <canvas class="chart-canvas" data-chart="ratings" data-chart-height="165"></canvas>
+              </div>
+              <div class="visual-panel p-5 reveal">
+                <p class="text-sm font-black text-slate-500 dark:text-slate-400">Store listing preview</p>
+                <h3 class="font-heading text-2xl font-extrabold">SEO score 92</h3>
+                <div class="mt-4 grid gap-3 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                  <span>Keyword coverage: productivity, automation, workspace</span>
+                  <span>Screenshot set: 5 dashboard frames</span>
+                  <span>Privacy copy: reviewed and scoped</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 visual-grid">
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">Crash trend</p>
+              <canvas class="chart-canvas" data-chart="crash" data-chart-height="150"></canvas>
+            </div>
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">Retention cohorts</p>
+              <canvas class="chart-canvas" data-chart="retention" data-chart-height="150"></canvas>
+            </div>
+            <div class="visual-tile reveal">
+              <p class="font-heading text-lg font-extrabold">Review queue</p>
+              <div class="mt-4 space-y-3 text-sm">
+                <p class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">Feature request tagged for roadmap</p>
+                <p class="rounded-lg border border-slate-200 p-3 dark:border-slate-800">Privacy question answered with policy link</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad">
+        <div class="container-wide">
+          <div class="mx-auto mb-12 max-w-3xl text-center reveal">
+            <span class="section-kicker justify-center"><i data-lucide="message-circle-heart" class="h-4 w-4"></i> Testimonials</span>
+            <h2 class="section-title mx-auto">Built for teams that need reliable extension execution.</h2>
+            <p class="section-copy mx-auto mt-5">
+              Founders, product managers, and technical leads get clear implementation detail without losing the polish clients expect from a premium SaaS partner.
+            </p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-3">
+            <blockquote class="saas-card reveal">
+              <div class="mb-5 flex gap-1 text-secondary">
+                <i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i>
+              </div>
+              <p class="font-semibold">"The dashboard made beta feedback and launch approvals feel organized from day one."</p>
+              <footer class="mt-5 text-sm font-black text-slate-500 dark:text-slate-400">Product Lead, SaaS automation team</footer>
+            </blockquote>
+            <blockquote class="saas-card reveal">
+              <div class="mb-5 flex gap-1 text-secondary">
+                <i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i>
+              </div>
+              <p class="font-semibold">"The permission review saved us a store rejection and gave our legal team confidence."</p>
+              <footer class="mt-5 text-sm font-black text-slate-500 dark:text-slate-400">Founder, productivity startup</footer>
+            </blockquote>
+            <blockquote class="saas-card reveal">
+              <div class="mb-5 flex gap-1 text-secondary">
+                <i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i><i data-lucide="star" class="h-4 w-4"></i>
+              </div>
+              <p class="font-semibold">"We finally had extension analytics that matched the way our product team thinks."</p>
+              <footer class="mt-5 text-sm font-black text-slate-500 dark:text-slate-400">Growth PM, e-commerce tool</footer>
+            </blockquote>
+          </div>
+
+          <div class="mt-10 grid gap-5 md:grid-cols-3">
+            <div class="metric-card reveal">
+              <p class="font-heading text-4xl font-extrabold" data-counter="9" data-suffix="/10">0</p>
+              <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Client clarity score</p>
+            </div>
+            <div class="metric-card reveal">
+              <p class="font-heading text-4xl font-extrabold" data-counter="21" data-suffix=" days">0</p>
+              <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Typical beta timeline</p>
+            </div>
+            <div class="metric-card reveal">
+              <p class="font-heading text-4xl font-extrabold" data-counter="12" data-suffix="+">0</p>
+              <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Industries supported</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white/55 dark:bg-slate-950/30">
+        <div class="container-wide">
+          <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div class="reveal">
+              <span class="section-kicker"><i data-lucide="send" class="h-4 w-4"></i> Start the build</span>
+              <h2 class="section-title">Bring your extension idea into a secure client dashboard.</h2>
+              <p class="section-copy mt-5">
+                Share the specification, review the beta workflow, and see how publishing, analytics, updates, and user feedback can fit into one premium delivery system.
+              </p>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a class="btn btn-primary" href="contact.html"><i data-lucide="calendar-check" class="h-4 w-4"></i>Book Consultation</a>
+                <a class="btn btn-ghost" href="signup.html"><i data-lucide="user-plus" class="h-4 w-4"></i>Create Client Access</a>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 reveal">
+              <div class="visual-tile">
+                <p class="font-heading text-xl font-extrabold">Spec review</p>
+                <div class="mt-5 space-y-3">
+                  <div class="progress-track"><div class="progress-bar" style="width: 82%"></div></div>
+                  <div class="progress-track"><div class="progress-bar" style="width: 66%"></div></div>
+                </div>
+              </div>
+              <div class="visual-tile">
+                <p class="font-heading text-xl font-extrabold">Live demo</p>
+                <div class="mt-5 mini-chart"></div>
+              </div>
+              <div class="visual-tile sm:col-span-2">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <p class="font-heading text-xl font-extrabold">Client dashboard access</p>
+                  <span class="platform-chip"><i data-lucide="lock" class="h-4 w-4"></i> Secure</span>
+                </div>
+                <div class="mt-5 grid gap-3 sm:grid-cols-3">
+                  <span class="rounded-lg border border-slate-200 p-3 text-sm font-bold dark:border-slate-800">Reports</span>
+                  <span class="rounded-lg border border-slate-200 p-3 text-sm font-bold dark:border-slate-800">Messages</span>
+                  <span class="rounded-lg border border-slate-200 p-3 text-sm font-bold dark:border-slate-800">Updates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

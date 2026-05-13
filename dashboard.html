@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure browser extension client dashboard for specs, beta versions, store listings, analytics, reviews, updates, reports, messages, and billing." />
+    <title>Dashboard | ExtensionForge</title>
+    <script src="assets/js/theme-init.js"></script>
+    <script src="assets/js/tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+      <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  </head>
+  <body>
+    <div class="dashboard-shell" data-dashboard>
+      <aside class="dashboard-sidebar p-4" data-dashboard-sidebar>
+        <div class="flex items-center justify-between gap-3">
+          <a href="index.html" class="flex min-w-0 items-center gap-3">
+            <span class="brand-mark"><i data-lucide="blocks" class="h-5 w-5"></i></span>
+            <span class="dashboard-brand-text min-w-0">
+              <span class="block truncate font-heading text-lg font-extrabold">ExtensionForge</span>
+              <span class="block truncate text-xs font-bold text-slate-500 dark:text-slate-400">Client dashboard</span>
+            </span>
+          </a>
+          <button class="icon-btn" type="button" data-sidebar-collapse aria-label="Collapse sidebar"><i data-lucide="panel-left-close" class="h-4 w-4"></i></button>
+        </div>
+
+        <nav class="mt-8 grid gap-1" aria-label="Dashboard navigation">
+          <button class="dashboard-nav-item active" type="button" data-dashboard-tab="overview"><i data-lucide="layout-dashboard" class="h-4 w-4"></i><span class="sidebar-label">Dashboard Overview</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="specs"><i data-lucide="file-text" class="h-4 w-4"></i><span class="sidebar-label">Extension Specs</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="beta"><i data-lucide="package-open" class="h-4 w-4"></i><span class="sidebar-label">Beta Versions</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="listings"><i data-lucide="store" class="h-4 w-4"></i><span class="sidebar-label">Store Listings</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="analytics"><i data-lucide="bar-chart-3" class="h-4 w-4"></i><span class="sidebar-label">Usage Analytics</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="reviews"><i data-lucide="message-square-reply" class="h-4 w-4"></i><span class="sidebar-label">User Reviews</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="updates"><i data-lucide="refresh-cw" class="h-4 w-4"></i><span class="sidebar-label">Update Management</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="reports"><i data-lucide="file-down" class="h-4 w-4"></i><span class="sidebar-label">Reports</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="messages"><i data-lucide="messages-square" class="h-4 w-4"></i><span class="sidebar-label">Messages</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="billing"><i data-lucide="credit-card" class="h-4 w-4"></i><span class="sidebar-label">Billing</span></button>
+          <button class="dashboard-nav-item" type="button" data-dashboard-tab="settings"><i data-lucide="settings" class="h-4 w-4"></i><span class="sidebar-label">Settings</span></button>
+          <a class="dashboard-nav-item" href="signup.html"><i data-lucide="log-out" class="h-4 w-4"></i><span class="sidebar-label">Logout</span></a>
+        </nav>
+
+        <div class="sidebar-meta mt-8 rounded-lg border border-slate-200 p-4 text-sm dark:border-slate-800">
+          <p class="font-heading font-extrabold">Extension Suite</p>
+          <p class="mt-1 font-semibold text-slate-500 dark:text-slate-400">Professional plan active</p>
+          <div class="mt-4 progress-track"><div class="progress-bar" style="width: 74%"></div></div>
+        </div>
+      </aside>
+
+      <div class="mobile-backdrop" data-dashboard-backdrop></div>
+
+      <main class="dashboard-main">
+        <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80 lg:px-8">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <button class="icon-btn mobile-only order-1" type="button" data-sidebar-open aria-label="Open dashboard sidebar"><i data-lucide="menu" class="h-5 w-5"></i></button>
+            <div class="order-3 w-full md:order-2 md:w-auto">
+              <p class="text-sm font-black text-slate-500 dark:text-slate-400">Secure developer dashboard</p>
+              <h1 class="font-heading text-2xl font-extrabold">Extension delivery command center</h1>
+            </div>
+            <div class="order-2 flex items-center gap-2 md:order-3">
+              <label class="hidden md:block"><span class="sr-only">Search dashboard</span><input class="form-field min-w-64" placeholder="Search specs, reports, messages" /></label>
+              <div class="relative">
+                <button class="icon-btn" type="button" data-notification-toggle aria-label="Open notifications"><i data-lucide="bell" class="h-4 w-4"></i></button>
+                <div class="notification-menu p-4" data-notification-menu>
+                  <h2 class="font-heading text-lg font-extrabold">Notifications</h2>
+                  <div class="mt-4 grid gap-3 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                    <p>Chrome listing SEO score moved to 92.</p>
+                    <p>Beta v2.4 changelog is ready for approval.</p>
+                    <p>Two reviews need response samples.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme"></button>
+              <button class="icon-btn" type="button" data-rtl-toggle aria-label="Toggle RTL"></button>
+            </div>
+          </div>
+        </header>
+
+        <div class="px-4 py-8 lg:px-8">
+          <section class="dashboard-panel active" data-dashboard-panel="overview">
+            <div class="dashboard-hero reveal">
+              <div class="relative z-10 max-w-3xl">
+                <span class="section-kicker"><i data-lucide="activity" class="h-4 w-4"></i> Dashboard overview</span>
+                <h2 class="font-heading text-4xl font-extrabold md:text-5xl">Welcome back, client team.</h2>
+                <p class="mt-4 max-w-2xl font-semibold text-slate-600 dark:text-slate-300">Monitor active extensions, store ratings, retention, beta builds, and review queues from one secure workspace.</p>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              <div class="metric-card reveal"><p class="text-sm font-black text-slate-500 dark:text-slate-400">Active Extensions</p><p class="mt-2 font-heading text-4xl font-extrabold" data-counter="12">0</p></div>
+              <div class="metric-card reveal"><p class="text-sm font-black text-slate-500 dark:text-slate-400">Total Installs</p><p class="mt-2 font-heading text-4xl font-extrabold" data-counter="148320">0</p></div>
+              <div class="metric-card reveal"><p class="text-sm font-black text-slate-500 dark:text-slate-400">User Retention</p><p class="mt-2 font-heading text-4xl font-extrabold" data-counter="78" data-suffix="%">0</p></div>
+              <div class="metric-card reveal"><p class="text-sm font-black text-slate-500 dark:text-slate-400">Store Ratings</p><p class="mt-2 font-heading text-4xl font-extrabold" data-counter="48" data-prefix="4." data-suffix="/5">0</p></div>
+            </div>
+
+            <div class="mt-6 grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
+              <div class="visual-panel p-5 reveal"><div class="mb-4 flex items-center justify-between gap-3"><h3 class="font-heading text-2xl font-extrabold">Install chart</h3><span class="platform-chip">+31%</span></div><canvas class="chart-canvas" data-chart="installs"></canvas></div>
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-2xl font-extrabold">Extension filters</h3><div class="mt-4 flex flex-wrap gap-3"><button class="btn btn-primary" data-dashboard-filter="all">All</button><button class="btn btn-ghost" data-dashboard-filter="active">Active</button><button class="btn btn-ghost" data-dashboard-filter="review">In review</button></div><div class="mt-5 grid gap-3"><div class="metric-card" data-filter-card="active"><p class="font-bold">Inbox Automator</p><p class="text-sm text-slate-500 dark:text-slate-400">Chrome and Firefox live</p></div><div class="metric-card" data-filter-card="review"><p class="font-bold">Price Tracker</p><p class="text-sm text-slate-500 dark:text-slate-400">Chrome review pending</p></div><div class="metric-card" data-filter-card="active"><p class="font-bold">Tab CRM Helper</p><p class="text-sm text-slate-500 dark:text-slate-400">Beta testers active</p></div></div></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="specs">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="file-text" class="h-4 w-4"></i> Extension specs</span><h2 class="section-title">Feature documentation, compatibility, and API integrations.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-3">
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Feature documentation</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Popup actions, content scripts, background events, and settings flows.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 86%"></div></div></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Browser compatibility</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Chrome MV3, Firefox Add-ons, permissions, APIs, and fallback behavior.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 78%"></div></div></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">API integrations</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">OAuth, SaaS APIs, webhook events, storage strategy, and analytics endpoints.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 91%"></div></div></div>
+            </div>
+            <div class="mt-6 browser-frame reveal"><div class="browser-topbar"><span class="window-dots"><span></span><span></span><span></span></span><span class="browser-address">specs/permissions-guide</span></div><div class="grid gap-5 p-6 md:grid-cols-3"><div><h3 class="font-heading text-xl font-extrabold">Permissions</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">storage, tabs, scripting, alarms, notifications</p></div><div><h3 class="font-heading text-xl font-extrabold">Data</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Local state, opt-in analytics, no unnecessary collection</p></div><div><h3 class="font-heading text-xl font-extrabold">Review notes</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Human-readable explanations for store reviewers</p></div></div></div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="beta" id="beta">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="package-open" class="h-4 w-4"></i> Beta versions</span><h2 class="section-title">Download beta builds, preview changelogs, and review version history.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+              <label class="upload-zone reveal" for="beta-upload"><input id="beta-upload" class="sr-only" type="file" data-upload-input /><span><i data-lucide="upload-cloud" class="mx-auto mb-4 h-9 w-9 text-primary"></i><strong data-upload-label="beta-upload">Drop a beta build or select a file</strong><span class="mt-2 block text-sm text-slate-500 dark:text-slate-400">ZIP, CRX, XPI, or release notes package</span></span></label>
+              <div class="grid gap-4">
+                <div class="metric-card reveal"><div class="flex items-center justify-between gap-3"><h3 class="font-heading text-xl font-extrabold">v2.4.0 beta</h3><a class="btn btn-ghost" href="#"><i data-lucide="download" class="h-4 w-4"></i>Download</a></div><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Adds review response shortcuts and crash report filters.</p></div>
+                <div class="metric-card reveal"><div class="flex items-center justify-between gap-3"><h3 class="font-heading text-xl font-extrabold">v2.3.2 stable</h3><a class="btn btn-ghost" href="#"><i data-lucide="download" class="h-4 w-4"></i>Download</a></div><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Store listing updates and Firefox compatibility patch.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="listings">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="store" class="h-4 w-4"></i> Store listings</span><h2 class="section-title">Chrome Web Store and Firefox Add-ons previews with SEO metrics.</h2></div>
+            <div class="grid gap-5 xl:grid-cols-2">
+              <div class="browser-frame reveal"><div class="browser-topbar"><span class="window-dots"><span></span><span></span><span></span></span><span class="browser-address">chrome.google.com/webstore/detail/preview</span></div><div class="p-6"><h3 class="font-heading text-2xl font-extrabold">Chrome Web Store preview</h3><p class="mt-3 text-slate-500 dark:text-slate-400">Productivity extension with analytics screenshot set and scoped permission copy.</p><canvas class="chart-canvas mt-5" data-chart="growth" data-chart-height="190"></canvas></div></div>
+              <div class="browser-frame reveal"><div class="browser-topbar"><span class="window-dots"><span></span><span></span><span></span></span><span class="browser-address">addons.mozilla.org/firefox/addon/preview</span></div><div class="p-6"><h3 class="font-heading text-2xl font-extrabold">Firefox Add-ons preview</h3><p class="mt-3 text-slate-500 dark:text-slate-400">Compatibility notes, add-on screenshots, and reviewer-friendly privacy summary.</p><canvas class="chart-canvas mt-5" data-chart="retention" data-chart-height="190"></canvas></div></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="analytics">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="bar-chart-3" class="h-4 w-4"></i> Usage analytics</span><h2 class="section-title">Install charts, active users, crash reports, and retention analytics.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+              <div class="visual-panel p-5 reveal xl:col-span-2"><h3 class="font-heading text-xl font-extrabold">Active users</h3><canvas class="chart-canvas" data-chart="installs"></canvas></div>
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-xl font-extrabold">Crash reports</h3><canvas class="chart-canvas" data-chart="crash" data-chart-height="210"></canvas></div>
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-xl font-extrabold">Retention</h3><canvas class="chart-canvas" data-chart="retention" data-chart-height="210"></canvas></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="reviews">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="message-square-reply" class="h-4 w-4"></i> User reviews</span><h2 class="section-title">Manage ratings, review responses, and sentiment patterns.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-xl font-extrabold">Rating breakdown</h3><canvas class="chart-canvas" data-chart="ratings" data-chart-height="230"></canvas></div>
+              <div class="grid gap-4">
+                <div class="metric-card reveal"><p class="font-heading text-xl font-extrabold">Response sample: privacy question</p><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Thanks for asking. The extension uses storage only for local preferences and does not sell or share usage data.</p></div>
+                <div class="metric-card reveal"><p class="font-heading text-xl font-extrabold">Response sample: feature request</p><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Great suggestion. The team is reviewing this for the next beta release and will update the changelog.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="updates">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="refresh-cw" class="h-4 w-4"></i> Update management</span><h2 class="section-title">Release scheduling, rollout tracking, and notifications.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-3">
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">v2.4 release</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Scheduled after beta approval and store listing copy lock.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 72%"></div></div></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Feature rollout</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Response shortcuts enabled for 40% of beta testers.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 40%"></div></div></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Notifications</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Client alerts active for review status, beta uploads, and crash spikes.</p><div class="mt-5 progress-track"><div class="progress-bar" style="width: 93%"></div></div></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="reports" id="reports">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="file-down" class="h-4 w-4"></i> Reports</span><h2 class="section-title">Download analytics reports and export dashboard summaries.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-3">
+              <div class="saas-card reveal"><i data-lucide="file-spreadsheet" class="mb-4 h-7 w-7 text-primary"></i><h3 class="font-heading text-xl font-extrabold">Analytics CSV</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Installs, retention, ratings, and active extension totals.</p><button class="btn btn-primary mt-6 w-full" data-download-report data-file-name="extension-analytics-report.csv"><i data-lucide="download" class="h-4 w-4"></i>Download CSV</button></div>
+              <div class="saas-card reveal"><i data-lucide="file-text" class="mb-4 h-7 w-7 text-secondary"></i><h3 class="font-heading text-xl font-extrabold">Launch report</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Store listing score, beta status, and release notes.</p><button class="btn btn-ghost mt-6 w-full" data-download-report data-file-name="extension-launch-report.csv"><i data-lucide="download" class="h-4 w-4"></i>Download Report</button></div>
+              <div class="saas-card reveal"><i data-lucide="printer" class="mb-4 h-7 w-7 text-primary"></i><h3 class="font-heading text-xl font-extrabold">PDF export</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Open the dashboard summary in the browser print flow.</p><button class="btn btn-ghost mt-6 w-full" data-print-report><i data-lucide="file-down" class="h-4 w-4"></i>Export PDF</button></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="messages">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="messages-square" class="h-4 w-4"></i> Messages</span><h2 class="section-title">Secure client communication UI.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-xl font-extrabold">Threads</h3><div class="mt-4 grid gap-3"><button class="dashboard-nav-item active" type="button"><i data-lucide="message-circle" class="h-4 w-4"></i>Beta feedback</button><button class="dashboard-nav-item" type="button"><i data-lucide="message-circle" class="h-4 w-4"></i>Store review</button><button class="dashboard-nav-item" type="button"><i data-lucide="message-circle" class="h-4 w-4"></i>Analytics report</button></div></div>
+              <div class="visual-panel p-5 reveal"><h3 class="font-heading text-xl font-extrabold">Beta feedback</h3><div class="mt-5 grid gap-4"><p class="max-w-xl rounded-lg bg-blue-600/10 p-4 font-semibold">The Firefox build passed the options page test. Can we add one more screenshot to the store listing?</p><p class="ml-auto max-w-xl rounded-lg bg-orange-500/10 p-4 font-semibold">Yes. I will add the analytics dashboard frame and update the listing score.</p></div><label class="mt-5 grid gap-2 text-sm font-bold">Reply<textarea class="form-field min-h-28" placeholder="Write a secure message"></textarea></label></div>
+            </div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="billing">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="credit-card" class="h-4 w-4"></i> Billing</span><h2 class="section-title">Plan, invoices, and service coverage.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-3"><div class="saas-card reveal"><span class="platform-chip">Active</span><h3 class="mt-5 font-heading text-2xl font-extrabold">Professional Extension</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Chrome and Firefox support, analytics, publishing, beta dashboard, and maintenance updates.</p></div><div class="visual-panel p-5 reveal lg:col-span-2"><h3 class="font-heading text-xl font-extrabold">Billing usage</h3><canvas class="chart-canvas" data-chart="revenue" data-chart-height="220"></canvas></div></div>
+          </section>
+
+          <section class="dashboard-panel" data-dashboard-panel="settings">
+            <div class="mb-8 reveal"><span class="section-kicker"><i data-lucide="settings" class="h-4 w-4"></i> Settings</span><h2 class="section-title">Workspace preferences and dashboard controls.</h2></div>
+            <div class="grid gap-5 lg:grid-cols-3">
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Notification settings</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Store review, beta upload, crash spikes, and report availability.</p></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Security</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Client access, session controls, and project visibility.</p></div>
+              <div class="saas-card reveal"><h3 class="font-heading text-xl font-extrabold">Localization</h3><p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Use the global RTL toggle to preview right-to-left layouts.</p></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
