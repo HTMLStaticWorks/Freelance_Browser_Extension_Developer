@@ -87,11 +87,10 @@ function renderHeader() {
           <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
           <span class="leading-tight">
             <span class="block font-heading text-lg font-extrabold">ExtensionForge</span>
-            <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Freelance Developer</span>
           </span>
         </a>
 
-        <nav class="desktop-nav hidden items-center justify-center gap-5 lg:flex mx-auto px-4" aria-label="Primary navigation">
+        <nav class="desktop-nav hidden items-center justify-center gap-3 xl:gap-5 lg:flex mx-auto px-4" aria-label="Primary navigation">
           ${desktopNavHtml}
         </nav>
 
@@ -99,13 +98,11 @@ function renderHeader() {
           <div class="desktop-ctas hidden items-center gap-2 xl:flex">
             <a class="btn btn-ghost btn-sm" href="dashboard.html">${icon("monitor-dot")}<span>View Live Demo</span></a>
           </div>
-          <div class="flex items-center gap-2">
-            <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
-            <button class="icon-btn" type="button" data-rtl-toggle aria-label="Toggle RTL"></button>
-            <button class="icon-btn mobile-only lg:hidden" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
-              ${icon("menu", "w-5 h-5")}
-            </button>
-          </div>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
+          <button class="text-btn" type="button" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
+          <button class="icon-btn lg:hidden" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
+            ${icon("menu", "w-5 h-5")}
+          </button>
         </div>
       </div>
     </header>
@@ -165,7 +162,6 @@ function renderFooter() {
               <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
               <span>
                 <span class="block font-heading text-xl font-extrabold">ExtensionForge</span>
-                <span class="block text-sm font-bold text-slate-500 dark:text-slate-400">Enterprise browser extension delivery</span>
               </span>
             </a>
             <p class="max-w-md text-sm text-slate-500 dark:text-slate-400">
@@ -212,10 +208,12 @@ function updateToggleButtons() {
   });
 
   document.querySelectorAll("[data-rtl-toggle]").forEach((button) => {
-    const isIconBtn = button.classList.contains("icon-btn");
-    // Show the align-right icon for the RTL toggle in both the header and the mobile menu
-    const iconHtml = icon("align-right", "w-4 h-4");
-    button.innerHTML = `${iconHtml}<span class="${isIconBtn ? "sr-only" : ""}">${isRtl ? "LTR" : "RTL"}</span>`;
+    const isTextBtn = button.classList.contains("text-btn") || button.classList.contains("btn");
+    if (isTextBtn) {
+      button.textContent = isRtl ? "LTR" : "RTL";
+    } else {
+      button.innerHTML = `${icon("align-right", "w-4 h-4")}<span class="sr-only">${isRtl ? "LTR" : "RTL"}</span>`;
+    }
     button.setAttribute("aria-pressed", String(isRtl));
   });
 

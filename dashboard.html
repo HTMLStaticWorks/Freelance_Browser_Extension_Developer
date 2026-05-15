@@ -54,7 +54,7 @@
 
       <main class="dashboard-main">
         <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80 lg:px-8">
-          <div class="flex items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
             <div class="flex flex-1 items-center gap-3 min-w-0">
               <button class="icon-btn mobile-only shrink-0" type="button" data-sidebar-open aria-label="Open dashboard sidebar"><i data-lucide="menu" class="h-5 w-5"></i></button>
               <div class="min-w-0">
@@ -62,8 +62,13 @@
                 <h1 class="truncate font-heading text-lg font-extrabold sm:text-xl">Extension delivery command center</h1>
               </div>
             </div>
+
+            <label class="order-last w-full md:order-none md:block md:w-auto md:flex-1 md:max-w-md">
+              <span class="sr-only">Search dashboard</span>
+              <input class="form-field" placeholder="Search specs, reports, messages" />
+            </label>
+
             <div class="flex items-center gap-2 shrink-0">
-              <label class="hidden md:block"><span class="sr-only">Search dashboard</span><input class="form-field min-w-64" placeholder="Search specs, reports, messages" /></label>
               <div class="relative">
                 <button class="icon-btn" type="button" data-notification-toggle aria-label="Open notifications"><i data-lucide="bell" class="h-4 w-4"></i></button>
                 <div class="notification-menu p-4" data-notification-menu>
@@ -76,7 +81,7 @@
                 </div>
               </div>
               <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme"></button>
-              <button class="icon-btn" type="button" data-rtl-toggle aria-label="Toggle RTL"></button>
+              <button class="text-btn" type="button" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
             </div>
           </div>
         </header>

@@ -15,6 +15,13 @@ window.tailwind.config = {
         soft: "0 18px 50px rgba(15, 23, 42, 0.10)",
         glow: "0 18px 70px rgba(37, 99, 235, 0.22)"
       }
+    },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1200px',
+      'xl': '1280px',
+      '2xl': '1536px',
     }
   }
 };
