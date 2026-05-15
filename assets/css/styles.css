@@ -422,17 +422,17 @@ canvas {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(248, 250, 252, 0.98), rgba(248, 250, 252, 0.88) 52%, rgba(248, 250, 252, 0.58)),
-    radial-gradient(circle at 72% 26%, rgba(37, 99, 235, 0.22), transparent 24rem),
-    radial-gradient(circle at 86% 70%, rgba(249, 115, 22, 0.18), transparent 22rem);
+    linear-gradient(180deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.85) 45%, rgba(248, 250, 252, 0.68) 100%),
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15), transparent 30rem),
+    radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.12), transparent 25rem);
   content: "";
 }
 
 .dark .hero-section::before {
   background:
-    linear-gradient(90deg, rgba(7, 17, 31, 0.96), rgba(7, 17, 31, 0.78) 48%, rgba(7, 17, 31, 0.38)),
-    radial-gradient(circle at 72% 26%, rgba(37, 99, 235, 0.30), transparent 24rem),
-    radial-gradient(circle at 86% 70%, rgba(249, 115, 22, 0.20), transparent 22rem);
+    linear-gradient(180deg, rgba(7, 17, 31, 0.96) 0%, rgba(7, 17, 31, 0.88) 45%, rgba(7, 17, 31, 0.72) 100%),
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.22), transparent 30rem),
+    radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.15), transparent 25rem);
 }
 
 .hero-bg-home {
