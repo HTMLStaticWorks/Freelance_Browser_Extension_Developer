@@ -98,7 +98,7 @@ function renderHeader() {
         <div class="flex items-center gap-2">
           <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
           <button class="text-btn" type="button" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
-          <button class="icon-btn lg:hidden" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
+          <button class="icon-btn mobile-only" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
             ${icon("menu", "w-5 h-5")}
           </button>
         </div>
