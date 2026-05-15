@@ -21,20 +21,20 @@
     <div id="site-header"></div>
 
     <main>
-      <section class="hero-section hero-bg-home">
-        <div class="container-wide hero-grid">
-          <div class="reveal">
-            <span class="section-kicker">
+      <section class="section-pad bg-white/55 dark:bg-slate-950/30">
+        <div class="container-wide">
+          <div class="mx-auto mb-12 max-w-4xl text-center reveal">
+            <span class="section-kicker justify-center">
               <i data-lucide="globe-2" class="h-4 w-4"></i>
               Chrome and Firefox extension delivery
             </span>
-            <h1 class="hero-title soft-glow">
+            <h1 class="hero-title soft-glow mx-auto">
               Custom Browser Extensions <span class="gradient-text">Built for Growth</span>
             </h1>
-            <p class="hero-copy mt-6">
+            <p class="hero-copy mt-6 mx-auto">
               Premium extension strategy, development, publishing, analytics, beta release support, and secure client dashboards for SaaS teams, startups, productivity apps, e-commerce brands, and automation agencies.
             </p>
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a href="contact.html" class="btn btn-primary">
                 <i data-lucide="rocket" class="h-4 w-4"></i>
                 Build My Extension
@@ -44,7 +44,7 @@
                 View Live Demo
               </a>
             </div>
-            <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <div class="mt-12 grid gap-6 sm:grid-cols-3 max-w-2xl mx-auto">
               <div class="metric-card">
                 <p class="text-3xl font-black font-heading" data-counter="42" data-suffix="+">0</p>
                 <p class="text-sm font-bold text-slate-500 dark:text-slate-400">Store launches</p>
@@ -59,6 +59,8 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
           <div class="relative reveal">
             <div class="browser-frame float-card">
@@ -111,12 +113,10 @@
 
       <section class="section-pad">
         <div class="container-wide">
-          <div class="reveal mb-12 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-            <div>
-              <span class="section-kicker"><i data-lucide="badge-check" class="h-4 w-4"></i> Trusted platforms</span>
-              <h2 class="section-title">Extension work built around browser store realities.</h2>
-            </div>
-            <p class="section-copy">
+          <div class="reveal mb-12 text-center mx-auto max-w-3xl">
+            <span class="section-kicker"><i data-lucide="badge-check" class="h-4 w-4"></i> Trusted platforms</span>
+            <h2 class="section-title">Extension work built around browser store realities.</h2>
+            <p class="section-copy mt-5 mx-auto">
               The process is shaped around manifest changes, permission prompts, review cycles, store listing copy, beta build checks, and analytics instrumentation that product teams can trust.
             </p>
           </div>
@@ -174,32 +174,44 @@
 
           <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="layout-dashboard" class="mb-5 h-7 w-7 text-primary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/productivity.png" alt="Productivity Extensions" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">Productivity Extensions</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Context menus, tab workflows, shortcuts, account states, and smooth in-browser task flows.</p>
             </article>
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="bot" class="mb-5 h-7 w-7 text-secondary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/automation.png" alt="Automation Extensions" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">Automation Extensions</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Workflow triggers, background services, site actions, and reliable permission boundaries.</p>
             </article>
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="shopping-bag" class="mb-5 h-7 w-7 text-primary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/ecommerce.png" alt="E-commerce Tools" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">E-commerce Tools</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Price monitoring, product research panels, merchant dashboards, and storefront helpers.</p>
             </article>
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="sparkles" class="mb-5 h-7 w-7 text-secondary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/ai.png" alt="AI-Powered Extensions" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">AI-Powered Extensions</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Smart summarization, writing copilots, classifier overlays, and secure API handoffs.</p>
             </article>
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="database-zap" class="mb-5 h-7 w-7 text-primary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/data.png" alt="Data Capture Tools" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">Data Capture Tools</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Structured extraction, rate-aware collection, local storage, exports, and audit trails.</p>
             </article>
             <article class="saas-card flex flex-col items-center text-center reveal">
-              <i data-lucide="git-branch" class="mb-5 h-7 w-7 text-secondary"></i>
+              <div class="service-img-wrapper mb-6">
+                <img src="assets/img/workflow.png" alt="Workflow Enhancements" class="service-img">
+              </div>
               <h3 class="font-heading text-xl font-extrabold">Workflow Enhancements</h3>
               <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">Extensions that connect SaaS actions, CRM signals, browser tabs, and team operations.</p>
             </article>
@@ -228,12 +240,10 @@
 
       <section class="section-pad">
         <div class="container-wide">
-          <div class="mb-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end reveal">
-            <div>
-              <span class="section-kicker"><i data-lucide="workflow" class="h-4 w-4"></i> Development workflow</span>
-              <h2 class="section-title">A transparent delivery system for extension teams.</h2>
-            </div>
-            <p class="section-copy">
+          <div class="mb-12 text-center mx-auto max-w-3xl reveal">
+            <span class="section-kicker"><i data-lucide="workflow" class="h-4 w-4"></i> Development workflow</span>
+            <h2 class="section-title">A transparent delivery system for extension teams.</h2>
+            <p class="section-copy mt-5 mx-auto">
               Clients can review specifications, test beta builds, inspect compatibility notes, monitor store progress, and approve launch steps without losing context in long message threads.
             </p>
           </div>
@@ -422,18 +432,17 @@
 
       <section class="section-pad bg-white/55 dark:bg-slate-950/30">
         <div class="container-wide">
-          <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div class="reveal">
-              <span class="section-kicker"><i data-lucide="send" class="h-4 w-4"></i> Start the build</span>
-              <h2 class="section-title">Bring your extension idea into a secure client dashboard.</h2>
-              <p class="section-copy mt-5">
-                Share the specification, review the beta workflow, and see how publishing, analytics, updates, and user feedback can fit into one premium delivery system.
-              </p>
-              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a class="btn btn-primary" href="contact.html"><i data-lucide="calendar-check" class="h-4 w-4"></i>Book Consultation</a>
-                <a class="btn btn-ghost" href="signup.html"><i data-lucide="user-plus" class="h-4 w-4"></i>Create Client Access</a>
-              </div>
+          <div class="text-center mx-auto max-w-4xl reveal">
+            <span class="section-kicker justify-center"><i data-lucide="send" class="h-4 w-4"></i> Start the build</span>
+            <h2 class="section-title mx-auto">Bring your extension idea into a secure client dashboard.</h2>
+            <p class="section-copy mt-5 mx-auto">
+              Share the specification, review the beta workflow, and see how publishing, analytics, updates, and user feedback can fit into one premium delivery system.
+            </p>
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a class="btn btn-primary" href="contact.html"><i data-lucide="calendar-check" class="h-4 w-4"></i>Book Consultation</a>
+              <a class="btn btn-ghost" href="signup.html"><i data-lucide="user-plus" class="h-4 w-4"></i>Create Client Access</a>
             </div>
+          </div>
 
             <div class="grid gap-4 sm:grid-cols-2 reveal">
               <div class="visual-tile">
