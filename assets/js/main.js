@@ -115,10 +115,6 @@ function renderHeader() {
         <button class="icon-btn" type="button" data-menu-close aria-label="Close navigation">${icon("x", "w-5 h-5")}</button>
       </div>
       <nav class="grid gap-4" aria-label="Mobile primary navigation">${mobileNavHtml}</nav>
-      <div class="mt-6 flex gap-3">
-        <button class="btn btn-ghost flex-1" type="button" data-theme-toggle></button>
-        <button class="btn btn-ghost flex-1" type="button" data-rtl-toggle></button>
-      </div>
     </aside>
   `;
 }
