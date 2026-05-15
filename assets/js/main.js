@@ -96,9 +96,6 @@ function renderHeader() {
         </nav>
 
         <div class="flex items-center gap-2">
-          <div class="desktop-ctas hidden items-center gap-2 xl:flex">
-            <a class="btn btn-ghost btn-sm" href="dashboard.html">${icon("monitor-dot")}<span>View Live Demo</span></a>
-          </div>
           <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
           <button class="text-btn" type="button" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
           <button class="icon-btn lg:hidden" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">
@@ -118,9 +115,6 @@ function renderHeader() {
         <button class="icon-btn" type="button" data-menu-close aria-label="Close navigation">${icon("x", "w-5 h-5")}</button>
       </div>
       <nav class="grid gap-4" aria-label="Mobile primary navigation">${mobileNavHtml}</nav>
-      <div class="mt-8 grid gap-3">
-        <a class="btn btn-ghost btn-sm" href="dashboard.html"><span>View Live Demo</span></a>
-      </div>
       <div class="mt-6 flex gap-3">
         <button class="btn btn-ghost flex-1" type="button" data-theme-toggle></button>
         <button class="btn btn-ghost flex-1" type="button" data-rtl-toggle></button>
