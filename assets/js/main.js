@@ -64,36 +64,40 @@ function renderHeader() {
   if (!root) return;
 
   const page = currentPage();
-  const navHtml = navItems
-    .map((item) => {
-      if (item.isButton) {
-        const iconHtml = item.icon ? icon(item.icon, "w-4 h-4") : "";
-        return `<a class="btn btn-primary !py-2 !px-4 text-sm" href="${item.href}">${iconHtml}<span>${item.label}</span></a>`;
-      }
-      const active = page === item.href || (page === "" && item.href === "index.html");
-      return `<a class="nav-link ${active ? "active" : ""}" href="${item.href}">${item.label}</a>`;
-    })
-    .join("");
+  const getNavHtml = (isMobile = false) => {
+    return navItems
+      .map((item) => {
+        if (item.isButton) {
+          const iconHtml = !isMobile && item.icon ? icon(item.icon, "w-4 h-4") : "";
+          return `<a class="btn btn-primary btn-sm" href="${item.href}">${iconHtml}<span>${item.label}</span></a>`;
+        }
+        const active = page === item.href || (page === "" && item.href === "index.html");
+        return `<a class="nav-link ${active ? "active" : ""}" href="${item.href}">${item.label}</a>`;
+      })
+      .join("");
+  };
+
+  const desktopNavHtml = getNavHtml(false);
+  const mobileNavHtml = getNavHtml(true);
 
   root.innerHTML = `
     <header class="site-header">
       <div class="container-wide flex min-h-[76px] items-center justify-between gap-4">
         <a href="index.html" class="flex shrink-0 items-center gap-3" aria-label="Freelance Browser Extension Developer home">
           <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
-          <span class="hidden leading-tight sm:block">
+          <span class="leading-tight">
             <span class="block font-heading text-lg font-extrabold">ExtensionForge</span>
             <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Freelance Developer</span>
           </span>
         </a>
 
         <nav class="desktop-nav hidden items-center justify-center gap-5 lg:flex mx-auto px-4" aria-label="Primary navigation">
-          ${navHtml}
+          ${desktopNavHtml}
         </nav>
 
         <div class="flex items-center gap-2">
           <div class="desktop-ctas hidden items-center gap-2 xl:flex">
-            <a class="btn btn-primary" href="contact.html">${icon("rocket")}<span>Build My Extension</span></a>
-            <a class="btn btn-ghost" href="dashboard.html">${icon("monitor-dot")}<span>View Live Demo</span></a>
+            <a class="btn btn-ghost btn-sm" href="dashboard.html">${icon("monitor-dot")}<span>View Live Demo</span></a>
           </div>
           <div class="flex items-center gap-2">
             <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"></button>
@@ -115,10 +119,9 @@ function renderHeader() {
         </a>
         <button class="icon-btn" type="button" data-menu-close aria-label="Close navigation">${icon("x", "w-5 h-5")}</button>
       </div>
-      <nav class="grid gap-4" aria-label="Mobile primary navigation">${navHtml}</nav>
+      <nav class="grid gap-4" aria-label="Mobile primary navigation">${mobileNavHtml}</nav>
       <div class="mt-8 grid gap-3">
-        <a class="btn btn-primary" href="contact.html">${icon("rocket")}<span>Build My Extension</span></a>
-        <a class="btn btn-ghost" href="dashboard.html">${icon("monitor-dot")}<span>View Live Demo</span></a>
+        <a class="btn btn-ghost btn-sm" href="dashboard.html"><span>View Live Demo</span></a>
       </div>
       <div class="mt-6 flex gap-3">
         <button class="btn btn-ghost flex-1" type="button" data-theme-toggle></button>
@@ -131,6 +134,16 @@ function renderHeader() {
 function renderFooter() {
   const root = document.getElementById("site-footer");
   if (!root) return;
+
+  const page = currentPage();
+
+  const footerNavHtml = navItems
+    .filter((item) => !item.isButton)
+    .map((item) => {
+      const active = page === item.href || (page === "" && item.href === "index.html");
+      return `<li><a class="footer-nav-link ${active ? "active" : ""}" href="${item.href}">${item.label}</a></li>`;
+    })
+    .join("");
 
   const groupsHtml = footerGroups
     .map((group) => `
@@ -166,7 +179,9 @@ function renderFooter() {
           </div>
           <div class="grid gap-8 sm:grid-cols-3">${groupsHtml}</div>
         </div>
-        <div class="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-500 dark:border-slate-800 dark:text-slate-400 md:flex-row md:items-center md:justify-between">
+
+
+        <div class="mt-8 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-500 dark:border-slate-800 dark:text-slate-400 md:flex-row md:items-center md:justify-between">
           <p>&copy; <span data-year></span> ExtensionForge. Built for secure extension delivery.</p>
           <div class="flex gap-4">
             <a class="hover:text-primary" href="signup.html">Signup</a>
@@ -190,12 +205,17 @@ function updateToggleButtons() {
   const isRtl = document.documentElement.getAttribute("dir") === "rtl";
 
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
-    button.innerHTML = `${icon(isDark ? "sun" : "moon", "w-4 h-4")}<span class="${button.classList.contains("icon-btn") ? "sr-only" : ""}">${isDark ? "Light" : "Dark"}</span>`;
+    const isIconBtn = button.classList.contains("icon-btn");
+    const iconHtml = isIconBtn ? icon(isDark ? "sun" : "moon", "w-4 h-4") : "";
+    button.innerHTML = `${iconHtml}<span class="${isIconBtn ? "sr-only" : ""}">${isDark ? "Light" : "Dark"}</span>`;
     button.setAttribute("aria-pressed", String(isDark));
   });
 
   document.querySelectorAll("[data-rtl-toggle]").forEach((button) => {
-    button.innerHTML = `${icon("languages", "w-4 h-4")}<span class="${button.classList.contains("icon-btn") ? "sr-only" : ""}">${isRtl ? "LTR" : "RTL"}</span>`;
+    const isIconBtn = button.classList.contains("icon-btn");
+    // Show the align-right icon for the RTL toggle in both the header and the mobile menu
+    const iconHtml = icon("align-right", "w-4 h-4");
+    button.innerHTML = `${iconHtml}<span class="${isIconBtn ? "sr-only" : ""}">${isRtl ? "LTR" : "RTL"}</span>`;
     button.setAttribute("aria-pressed", String(isRtl));
   });
 
@@ -530,12 +550,19 @@ function initTipCarousel() {
 
 function initReadingProgress() {
   const bar = document.querySelector("[data-reading-progress]");
-  if (!bar) return;
+  const header = document.querySelector(".site-header");
 
   const update = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+
+    if (bar) {
+      bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+    }
+
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    }
   };
 
   update();

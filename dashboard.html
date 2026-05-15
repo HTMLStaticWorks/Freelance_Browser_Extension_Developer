@@ -54,13 +54,15 @@
 
       <main class="dashboard-main">
         <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 px-4 py-4 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80 lg:px-8">
-          <div class="flex flex-wrap items-center justify-between gap-4">
-            <button class="icon-btn mobile-only order-1" type="button" data-sidebar-open aria-label="Open dashboard sidebar"><i data-lucide="menu" class="h-5 w-5"></i></button>
-            <div class="order-3 w-full md:order-2 md:w-auto">
-              <p class="text-sm font-black text-slate-500 dark:text-slate-400">Secure developer dashboard</p>
-              <h1 class="font-heading text-2xl font-extrabold">Extension delivery command center</h1>
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex flex-1 items-center gap-3 min-w-0">
+              <button class="icon-btn mobile-only shrink-0" type="button" data-sidebar-open aria-label="Open dashboard sidebar"><i data-lucide="menu" class="h-5 w-5"></i></button>
+              <div class="min-w-0">
+                <p class="hidden text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider sm:block">Secure developer dashboard</p>
+                <h1 class="truncate font-heading text-lg font-extrabold sm:text-xl">Extension delivery command center</h1>
+              </div>
             </div>
-            <div class="order-2 flex items-center gap-2 md:order-3">
+            <div class="flex items-center gap-2 shrink-0">
               <label class="hidden md:block"><span class="sr-only">Search dashboard</span><input class="form-field min-w-64" placeholder="Search specs, reports, messages" /></label>
               <div class="relative">
                 <button class="icon-btn" type="button" data-notification-toggle aria-label="Open notifications"><i data-lucide="bell" class="h-4 w-4"></i></button>
