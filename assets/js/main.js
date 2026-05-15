@@ -18,6 +18,7 @@ const footerGroups = [
       ["Firefox Add-ons", "services.html#firefox"],
       ["Store Optimization", "services.html#store"],
       ["Analytics Setup", "services.html#analytics"]
+      
     ]
   },
   {
