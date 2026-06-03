@@ -1,14 +1,14 @@
 :root {
   --primary: #2563eb;
   --secondary: #f97316;
-  --bg: #f8fafc;
-  --surface: rgba(255, 255, 255, 0.82);
+  --bg: #ffffff;
+  --surface: rgba(255, 255, 255, 0.85);
   --surface-strong: #ffffff;
   --text: #0f172a;
   --muted: #64748b;
-  --line: rgba(15, 23, 42, 0.10);
-  --shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
-  --shadow-soft: 0 12px 34px rgba(15, 23, 42, 0.10);
+  --line: rgba(15, 23, 42, 0.08);
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.04);
   --rating: #fbbf24;
   color-scheme: light;
 }
@@ -66,6 +66,39 @@ a {
   text-decoration: none;
 }
 
+/* Style text links to be blue for standard UX practices and visibility */
+p a,
+form a,
+.auth-card a:not([href="index.html"]),
+.article-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 150ms ease;
+}
+
+p a:hover,
+form a:hover,
+.auth-card a:not([href="index.html"]):hover,
+.article-card a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.dark p a,
+.dark form a,
+.dark .auth-card a:not([href="index.html"]),
+.dark .article-card a {
+  color: #60a5fa;
+}
+
+.dark p a:hover,
+.dark form a:hover,
+.dark .auth-card a:not([href="index.html"]):hover,
+.dark .article-card a:hover {
+  color: #93c5fd;
+}
+
 button,
 input,
 textarea,
@@ -100,7 +133,7 @@ canvas {
   margin-bottom: 14px;
   color: var(--primary);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 500;
   text-transform: uppercase;
   width: 100%;
 }
@@ -110,7 +143,7 @@ canvas {
   color: var(--text);
   font-size: clamp(2rem, 4vw, 3.45rem);
   line-height: 1.05;
-  font-weight: 800;
+  font-weight: 500;
   text-align: center;
   margin-inline: auto;
 }
@@ -208,7 +241,7 @@ canvas {
   padding: 12px 18px;
   border: 1px solid transparent;
   border-radius: 8px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.15;
   white-space: nowrap;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
@@ -297,7 +330,7 @@ canvas {
 .brand-text {
   font-heading: 'Space Grotesk', sans-serif;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--text);
   white-space: nowrap;
 }
@@ -330,7 +363,7 @@ canvas {
   padding: 6px 2px;
   color: var(--muted);
   font-size: 0.94rem;
-  font-weight: 800;
+  font-weight: 500;
   white-space: nowrap;
   transition: color 180ms ease;
 }
@@ -422,9 +455,9 @@ canvas {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.85) 45%, rgba(248, 250, 252, 0.68) 100%),
-    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15), transparent 30rem),
-    radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.12), transparent 25rem);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 50%, rgba(255, 255, 255, 0.85) 100%),
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.12), transparent 30rem),
+    radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.08), transparent 25rem);
   content: "";
 }
 
@@ -435,8 +468,37 @@ canvas {
     radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.15), transparent 25rem);
 }
 
+@media (min-width: 1024px) {
+  .hero-section::before {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.65) 100%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.98) 100%),
+      radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15), transparent 30rem),
+      radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.12), transparent 25rem);
+  }
+
+  .dark .hero-section::before {
+    background:
+      linear-gradient(90deg, rgba(7, 17, 31, 0.98) 0%, rgba(7, 17, 31, 0.92) 35%, rgba(7, 17, 31, 0.25) 100%),
+      linear-gradient(180deg, rgba(7, 17, 31, 0) 60%, rgba(7, 17, 31, 0.96) 100%),
+      radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.22), transparent 30rem),
+      radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.15), transparent 25rem);
+  }
+}
+
 .hero-bg-home {
-  background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=3840&q=88");
+  background-image: url("https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=3840&q=88");
+  background-position: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-bg-home {
+    background-position: 80% center;
+  }
+}
+
+.dark .hero-bg-home {
+  background-image: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=3840&q=88");
 }
 
 .hero-bg-home2 {
@@ -464,7 +526,7 @@ canvas {
 }
 
 .hero-bg-dashboard {
-  background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=3840&q=88");
+  background-image: url("https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=3840&q=88");
 }
 
 .hero-grid {
@@ -480,13 +542,17 @@ canvas {
   max-width: 810px;
   font-size: clamp(2.75rem, 5.2vw, 4.85rem);
   line-height: 1.02;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .hero-copy {
   max-width: 680px;
-  color: var(--muted);
+  color: #334155; /* High-contrast slate-700 for light mode readability */
   font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.dark .hero-copy {
+  color: var(--muted);
 }
 
 .browser-frame {
@@ -598,7 +664,7 @@ canvas {
   background: var(--surface);
   color: var(--muted);
   font-size: 0.86rem;
-  font-weight: 800;
+  font-weight: 500;
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
 }
 
@@ -735,7 +801,7 @@ canvas {
   padding: 6px 2px;
   color: var(--muted);
   font-size: 0.94rem;
-  font-weight: 800;
+  font-weight: 500;
   white-space: nowrap;
   transition: color 180ms ease;
 }
@@ -772,7 +838,7 @@ canvas {
   border-radius: 8px;
   background: rgba(37, 99, 235, 0.08);
   color: var(--primary);
-  font-weight: 800;
+  font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   transition: all 200ms ease;
@@ -877,7 +943,7 @@ canvas {
   border: 1px solid transparent;
   border-radius: 12px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.94rem;
   text-align: start;
   transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -938,11 +1004,24 @@ canvas {
   padding: 32px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=3840&q=88");
-  background-position: center;
-  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=3840&q=88");
+  background-position: 50% 38%;
+  background-size: 135%;
+  background-repeat: no-repeat;
   box-shadow: var(--shadow-soft);
   isolation: isolate;
+}
+
+.dashboard-hero .section-kicker {
+  justify-content: flex-start;
+}
+
+.dashboard-hero p {
+  color: #334155 !important; /* High-contrast slate-700 in light mode */
+}
+
+.dark .dashboard-hero p {
+  color: #cbd5e1 !important; /* Light slate-300 in dark mode */
 }
 
 .dashboard-hero::before {
@@ -1126,7 +1205,7 @@ canvas {
 
   .dashboard-nav-item {
     color: var(--text) !important;
-    font-weight: 800;
+    font-weight: 500;
   }
 
   .dashboard-nav-item i {
@@ -1287,4 +1366,13 @@ canvas {
 .rating-star {
   color: var(--rating);
   fill: var(--rating);
+}
+
+/* Custom override to turn section white backgrounds into a clean, balanced light grey background */
+section.bg-white\/55 {
+  background-color: #f8fafc !important;
+}
+
+.dark section.bg-white\/55 {
+  background-color: rgba(15, 23, 42, 0.35) !important;
 }
