@@ -71,8 +71,8 @@ p a,
 form a,
 .auth-card a:not([href="index.html"]),
 .article-card a {
-  color: var(--primary);
-  text-decoration: none;
+  color: var(--primary) !important;
+  text-decoration: underline !important;
   font-weight: 500;
   transition: color 150ms ease;
 }
@@ -81,22 +81,22 @@ p a:hover,
 form a:hover,
 .auth-card a:not([href="index.html"]):hover,
 .article-card a:hover {
-  color: var(--secondary);
-  text-decoration: underline;
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
 }
 
 .dark p a,
 .dark form a,
 .dark .auth-card a:not([href="index.html"]),
 .dark .article-card a {
-  color: #60a5fa;
+  color: #60a5fa !important;
 }
 
 .dark p a:hover,
 .dark form a:hover,
 .dark .auth-card a:not([href="index.html"]):hover,
 .dark .article-card a:hover {
-  color: #93c5fd;
+  color: #93c5fd !important;
 }
 
 button,
