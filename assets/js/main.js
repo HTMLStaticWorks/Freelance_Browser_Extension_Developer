@@ -173,7 +173,7 @@ function renderFooter() {
           <div class="flex gap-4">
             <a class="hover:text-primary" href="signup.html">Signup</a>
             <a class="hover:text-primary" href="contact.html">Book consultation</a>
-            <a class="hover:text-primary" href="dashboard.html">Client dashboard</a>
+            <a class="hover:text-primary" href="dashboard.html">Dashboard</a>
           </div>
         </div>
       </div>
