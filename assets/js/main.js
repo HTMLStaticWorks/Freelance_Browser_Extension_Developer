@@ -87,7 +87,7 @@ function renderHeader() {
         <a href="index.html" class="flex shrink-0 items-center gap-3" aria-label="Freelance Browser Extension Developer home">
           <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
           <span class="leading-tight">
-            <span class="block font-heading text-lg font-extrabold">ExtensionForge</span>
+            <span class="block font-heading text-lg font-extrabold">Alex Rivers</span>
           </span>
         </a>
 
@@ -110,7 +110,7 @@ function renderHeader() {
       <div class="mb-8 flex items-center justify-between gap-3">
         <a href="index.html" class="flex items-center gap-3">
           <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
-          <span class="font-heading text-lg font-extrabold">ExtensionForge</span>
+          <span class="font-heading text-lg font-extrabold">Alex Rivers</span>
         </a>
         <button class="icon-btn" type="button" data-menu-close aria-label="Close navigation">${icon("x", "w-5 h-5")}</button>
       </div>
@@ -152,11 +152,11 @@ function renderFooter() {
             <a href="index.html" class="mb-5 flex items-center gap-3">
               <span class="brand-mark">${icon("blocks", "w-5 h-5")}</span>
               <span>
-                <span class="block font-heading text-xl font-extrabold">ExtensionForge</span>
+                <span class="block font-heading text-xl font-extrabold">Alex Rivers</span>
               </span>
             </a>
             <p class="max-w-md text-sm text-slate-500 dark:text-slate-400">
-              Premium Chrome and Firefox extension strategy, build, launch, analytics, and maintenance for product teams that need dependable browser-native workflows.
+              I provide premium Chrome and Firefox extension strategy, build, launch, analytics, and maintenance for product teams that need dependable browser-native workflows.
             </p>
             <div class="mt-6 flex flex-wrap gap-3">
               <span class="platform-chip">${icon("globe-2")}Chrome</span>
@@ -169,7 +169,7 @@ function renderFooter() {
 
 
         <div class="mt-8 flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm font-semibold text-slate-500 dark:border-slate-800 dark:text-slate-400 md:flex-row md:items-center md:justify-between">
-          <p>&copy; <span data-year></span> ExtensionForge. Built for secure extension delivery.</p>
+          <p>&copy; <span data-year></span> Alex Rivers. Built for secure extension delivery.</p>
           <div class="flex gap-4">
             <a class="hover:text-primary" href="signup.html">Signup</a>
             <a class="hover:text-primary" href="contact.html">Book consultation</a>
@@ -711,6 +711,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("resize", () => {
-  window.clearTimeout(window.__extensionForgeChartTimer);
-  window.__extensionForgeChartTimer = window.setTimeout(drawAllCharts, 120);
+  window.clearTimeout(window.__alexRiversChartTimer);
+  window.__alexRiversChartTimer = window.setTimeout(drawAllCharts, 120);
 });
