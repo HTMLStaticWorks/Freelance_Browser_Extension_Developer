@@ -455,7 +455,7 @@ canvas {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 50%, rgba(255, 255, 255, 0.85) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.82) 50%, rgba(255, 255, 255, 0.55) 100%),
     radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.12), transparent 30rem),
     radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.08), transparent 25rem);
   content: "";
@@ -471,7 +471,7 @@ canvas {
 @media (min-width: 1024px) {
   .hero-section::before {
     background:
-      linear-gradient(90deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.65) 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.20) 100%),
       linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.98) 100%),
       radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.15), transparent 30rem),
       radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.12), transparent 25rem);
@@ -506,7 +506,7 @@ canvas {
 }
 
 .hero-bg-about {
-  background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df0852?auto=format&fit=crop&w=3840&q=88");
+  background-image: url("../img/about_bg.png");
 }
 
 .hero-bg-services {
@@ -995,6 +995,13 @@ canvas {
   min-width: 0;
 }
 
+.dashboard-main header {
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(24px);
+  transition: background-color 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
 .dashboard-hero {
   position: relative;
   overflow: hidden;
@@ -1029,7 +1036,7 @@ canvas {
   z-index: -1;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(248, 250, 252, 0.94), rgba(248, 250, 252, 0.72)),
+    linear-gradient(90deg, rgba(248, 250, 252, 0.94), rgba(248, 250, 252, 0.35)),
     radial-gradient(circle at 75% 24%, rgba(37, 99, 235, 0.22), transparent 22rem),
     radial-gradient(circle at 86% 78%, rgba(249, 115, 22, 0.16), transparent 18rem);
   content: "";
