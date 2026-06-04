@@ -448,6 +448,7 @@ canvas {
   isolation: isolate;
   background-position: center;
   background-size: cover;
+  transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out;
 }
 
 .hero-section::before {
@@ -459,11 +460,12 @@ canvas {
     radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.12), transparent 30rem),
     radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.08), transparent 25rem);
   content: "";
+  transition: background 0.5s ease-in-out;
 }
 
 .dark .hero-section::before {
   background:
-    linear-gradient(180deg, rgba(7, 17, 31, 0.96) 0%, rgba(7, 17, 31, 0.88) 45%, rgba(7, 17, 31, 0.72) 100%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.85) 0%, rgba(7, 17, 31, 0.75) 45%, rgba(7, 17, 31, 0.55) 100%),
     radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.22), transparent 30rem),
     radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.15), transparent 25rem);
 }
@@ -479,8 +481,8 @@ canvas {
 
   .dark .hero-section::before {
     background:
-      linear-gradient(90deg, rgba(7, 17, 31, 0.98) 0%, rgba(7, 17, 31, 0.92) 35%, rgba(7, 17, 31, 0.25) 100%),
-      linear-gradient(180deg, rgba(7, 17, 31, 0) 60%, rgba(7, 17, 31, 0.96) 100%),
+      linear-gradient(90deg, rgba(7, 17, 31, 0.90) 0%, rgba(7, 17, 31, 0.80) 35%, rgba(7, 17, 31, 0.20) 100%),
+      linear-gradient(180deg, rgba(7, 17, 31, 0) 60%, rgba(7, 17, 31, 0.85) 100%),
       radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.22), transparent 30rem),
       radial-gradient(circle at 80% 70%, rgba(249, 115, 22, 0.15), transparent 25rem);
   }
@@ -497,10 +499,6 @@ canvas {
   }
 }
 
-.dark .hero-bg-home {
-  background-image: url("https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=3840&q=88");
-}
-
 .hero-bg-home2 {
   background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=3840&q=88");
 }
@@ -509,24 +507,48 @@ canvas {
   background-image: url("../img/about_bg.png");
 }
 
+.dark .hero-bg-about {
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=3840&q=88");
+}
+
 .hero-bg-services {
   background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=3840&q=88");
+}
+
+.dark .hero-bg-services {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=3840&q=88");
 }
 
 .hero-bg-pricing {
   background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=3840&q=88");
 }
 
+.dark .hero-bg-pricing {
+  background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=3840&q=88");
+}
+
 .hero-bg-blog {
   background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=3840&q=88");
+}
+
+.dark .hero-bg-blog {
+  background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=3840&q=88");
 }
 
 .hero-bg-contact {
   background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=3840&q=88");
 }
 
+.dark .hero-bg-contact {
+  background-image: url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=3840&q=88");
+}
+
 .hero-bg-dashboard {
   background-image: url("https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=3840&q=88");
+}
+
+.dark .hero-bg-dashboard {
+  background-image: url("https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=3840&q=88");
 }
 
 .hero-grid {
