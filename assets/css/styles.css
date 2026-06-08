@@ -1155,6 +1155,47 @@ canvas {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.13);
 }
 
+.password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.password-toggle:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.password-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+[dir="rtl"] .password-toggle {
+  left: 6px;
+  right: auto;
+}
+
+[dir="rtl"] .form-field.pr-12 {
+  padding-left: 3rem !important;
+  padding-right: 14px !important;
+}
+
 .article-card[hidden] {
   display: none;
 }
